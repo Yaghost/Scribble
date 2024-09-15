@@ -36,7 +36,10 @@ Link: [Modelagem](Documentação/Modelagem%20&%20Arquitetura.pdf)
 No projeto Scribble, os testes unitários validaram o funcionamento de componentes isolados, enquanto os testes sistêmicos manuais avaliaram o comportamento do sistema como um todo, garantindo que os fluxos de criação, edição e salvamento de diagramas funcionassem corretamente.
 
 ## Testes Unitários
+Os testes unitários foram realizados para validar as funcionalidades de persistência e manipulação das anotações no banco de dados. Eles abrangem a manipulação de dados na tabela de anotações, interações com o banco de dados via mock do DAO, e as funcionalidades da interface gráfica para adicionar, editar e excluir anotações. A seguir, um resumo dos testes, com objetivo, descrição e resultado de cada um:
 
+Link: [Testes Automatizados](./Documentação/Testes.pdf)
 ## Testes Sistêmicos
+Os testes foram realizados pela equipe para validação do sistema e para correções/melhorias de funções do sistema. A seguir, segue o link de acesso para os testes para uma melhor visualização dos mesmos:
 
 Link: [Testes Manuais](https://docs.google.com/spreadsheets/d/19H1wCPnC2xXhk8pEj9W9kB_1EBQ89W3a/edit?gid=173414780#gid=173414780)
