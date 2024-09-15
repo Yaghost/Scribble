@@ -29,7 +29,7 @@ public class GoalsDialogFrame extends JDialog {
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setTitle("Novo Objetivo");
 
-        colorChooserPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        colorChooserPanel.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
         colorChooserPanel.setName("Selecione uma Cor");
 
         goalColorChooser.setBorder(BorderFactory.createTitledBorder("Selecione uma Cor"));
@@ -127,7 +127,7 @@ public class GoalsDialogFrame extends JDialog {
                                 .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(contentPanel, java.awt.BorderLayout.CENTER);
+        getContentPane().add(contentPanel, BorderLayout.CENTER);
 
         pack();
         
