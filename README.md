@@ -23,7 +23,7 @@ Link: [Requisitos e Histórias de Usuário](./Documentação/Requisitos%20Funcio
 
 A modelagem de classes define a estrutura estática, detalhando entidades como diagramas e elementos gráficos, suas propriedades e interações. Já a modelagem de atividades representa o fluxo dinâmico do sistema, descrevendo as etapas e processos envolvidos na criação, edição e salvamento de diagramas Molic. Juntas, essas modelagens oferecem uma visão completa dos processos do Scribble, garantindo um planejamento e implementação eficazes.
 
-Link: [Modelagem](Modelagem.md)
+Link: [Modelagem](./Documentação/Modelagem%&%Arquitetura.pdf)
 
 ---
 
