@@ -9,23 +9,20 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class DatabaseTest {
 
     @Test
-    public void TestConnection() {
+    public void testConnection() throws RuntimeException {
         Connection con = null;
 
         try {
             String url = "jdbc:sqlite:scribble_db.sqlite";
-            con = DriverManager.getConnection(url, "sa", "sa");
+            con = DriverManager.getConnection(url);
 
-            assertNotNull(con);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            assertNotNull(con, "A conexão com o banco de dados não deve ser nula.");
+        } catch (SQLException ignored) {
         } finally {
             if (con != null) {
                 try {
                     con.close();
-                } catch (SQLException e) {
-                    System.out.println(e.getMessage());
-                }
+                } catch (SQLException ignored) {}
             }
         }
     }

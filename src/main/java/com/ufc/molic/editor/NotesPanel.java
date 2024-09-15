@@ -13,8 +13,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class NotesPanel extends JPanel {
 
-    private final JTable notesTable;
-    private final DefaultTableModel notesModel;
+    public final JTable notesTable;
+    public final DefaultTableModel notesModel;
 
     AnotacaoDAOImpl anotacaoDAO = new AnotacaoDAOImpl();
 
@@ -90,7 +90,7 @@ public class NotesPanel extends JPanel {
         }
     }
 
-    private void addNote() {
+    public void addNote() {
         String annotation = JOptionPane.showInputDialog(null, "Digite a nova anotação:");
         if (annotation != null && !annotation.trim().isEmpty()) {
             int nextId = getNextId();
@@ -102,7 +102,7 @@ public class NotesPanel extends JPanel {
         }
     }
 
-    private void editNote() {
+    public void editNote() {
         int selectedRow = notesTable.getSelectedRow();
         if (selectedRow != -1) {
             String currentAnnotation = (String) notesModel.getValueAt(selectedRow, 1);
@@ -122,7 +122,7 @@ public class NotesPanel extends JPanel {
         }
     }
 
-    private void deleteNote() {
+    public void deleteNote() {
         int selectedRow = notesTable.getSelectedRow();
         if (selectedRow != -1) {
             int confirm = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja excluir a anotação selecionada?", "Confirmar Exclusão", JOptionPane.YES_NO_OPTION);
@@ -145,7 +145,7 @@ public class NotesPanel extends JPanel {
         return rowCount > 0 ? (int) notesModel.getValueAt(rowCount - 1, 0) + 1 : 1;
     }
 
-    private void renumberIds() {
+    public void renumberIds() {
         for (int i = 0; i < notesModel.getRowCount(); i++) {
             notesModel.setValueAt(i + 1, i, 0);
         }
